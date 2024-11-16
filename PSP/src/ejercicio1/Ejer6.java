@@ -8,6 +8,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Ejer6 {
+	/*
+	 * Programa que ejecuta un “.bat” previamente preparado y recoge la salida en un archivo y los errores en otro.
+	 */
+	//Definicion de rutas
 	private static String RUTA_BAT = ".\\src\\ejercicio1\\prueba.bat";
 	private static String SALIDA = ".\\src\\ejercicio1\\salida.txt";
 	private static String ERRORES = ".\\src\\ejercicio1\\error.txt";
@@ -20,12 +24,16 @@ public class Ejer6 {
 
 			Process process = pb.start();
 
+			//Estos son los objetos de salida y error
 			File logSalida = new File(SALIDA);
 			File logError = new File(ERRORES);
-
+				//Captura la salida  generada por el proceso
 			try (BufferedReader readerSalida = new BufferedReader(new InputStreamReader(process.getInputStream()));
+					//Captura los errores generados por el proceso
 					BufferedReader readerError = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+					
 					BufferedWriter writerSalida = new BufferedWriter(new FileWriter(logSalida));
+					//Escribe las lineas leidas en los archivos
 					BufferedWriter writerError = new BufferedWriter(new FileWriter(logError))) {
 
 				String line;

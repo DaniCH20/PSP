@@ -29,7 +29,7 @@ public class Ejer5 {
 	      		 cmd+=line;
 	      	}
 	      	//verificamos si el string cmd contiene esa cadena de caracteres 
-	      	if(cmd.contains("notepad.exe")) {
+	      	if(cmd.contains("Notepad.exe")) {
 	      		//ejecutamo otro proceso que se encargara de matar al notepadd
 	      		 ProcessBuilder pn = new ProcessBuilder("CMD","/c","taskkill /IM notepad.exe");
 	      		pn.start();

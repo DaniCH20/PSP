@@ -2,6 +2,5 @@
 title Ejecutando tu primer archivo .bat
 echo Bienvenido 
 echo Bienvenido al 
-ecsho Bienvenido al .bat
-pausaaa
+echo Bienvenido al .bat
 echo escribe esto si puedes
