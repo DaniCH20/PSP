@@ -23,6 +23,7 @@ public class Ejer1 {
 			
 		
 			int codigoRetorno=proceso.waitFor();
+			System.out.println("Codigo de retorno:"+codigoRetorno);
 		
 			
 		}catch(IOException | InterruptedException e ) {

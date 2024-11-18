@@ -12,7 +12,7 @@ public class LlamarLectura {
         String cadena = teclado.nextLine();
         
         try {
-            ProcessBuilder pb = new ProcessBuilder("java", "-cp", "..\\PSP\\src", "ejercicio1.EjemploLectura", cadena);
+            ProcessBuilder pb = new ProcessBuilder("java", "-cp", "..\\PSP\\PSP/src", "ejercicio1.EjemploLectura", cadena);
             pb.redirectErrorStream(true); // Redirigir la salida de error
             
             Process p = pb.start();
